@@ -15,7 +15,10 @@ This package allows you to show a static preload image while image is preloaded 
 
     return(
       <BackgroundImage img={source} placeholder={localImage} {...otherProps}>
-        {...child components}
+        <div className="something-else">
+          Some more markup
+        </div>
+        <SomeOtherReactComponent />
       </BackgroundImage>
     );
   }
