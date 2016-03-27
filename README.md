@@ -20,3 +20,9 @@ This package allows you to show a static preload image while image is preloaded 
     );
   }
 ```
+
+## Props
+prop        | type   | notes
+------------|--------|-----------------------------------------
+img         | string | Remote image to be loaded
+placeholder | string | Local image to be immediately displayed
