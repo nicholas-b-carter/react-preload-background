@@ -7,6 +7,8 @@
 .idea
 # exclude all node_modules
 node_modules/
+#exclude webstorm
+.idea/
 
 # ignore npm error logs
 npm-debug.log

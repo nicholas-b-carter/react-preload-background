@@ -1,1 +1,1 @@
-module.exports = require('./dist/BackgroundImage.js');
+module.exports = require('./dist/PreloadBackground.js');

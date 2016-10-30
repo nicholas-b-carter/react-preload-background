@@ -26,15 +26,15 @@ var _react2 = _interopRequireDefault(_react);
   This component displays a placeholder image that is hosted locally
   while it waits for a remote image to load.
 
-  Usage: <BackgroundImage img={source} placeholder={localImage} {...other attributes}>
+  Usage: <PreloadBackground img={source} placeholder={localImage} {...other attributes}>
         {...child components}
-       </BackgroundImage>
+       </PreloadBackground>
 */
 
-var BackgroundLoader = (function (_React$Component) {
-  _inherits(BackgroundLoader, _React$Component);
+var PreloadBackground = (function (_React$Component) {
+  _inherits(PreloadBackground, _React$Component);
 
-  _createClass(BackgroundLoader, null, [{
+  _createClass(PreloadBackground, null, [{
     key: 'propTypes',
     get: function get() {
       return {
@@ -47,10 +47,10 @@ var BackgroundLoader = (function (_React$Component) {
     }
   }]);
 
-  function BackgroundLoader(props) {
-    _classCallCheck(this, BackgroundLoader);
+  function PreloadBackground(props) {
+    _classCallCheck(this, PreloadBackground);
 
-    _get(Object.getPrototypeOf(BackgroundLoader.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(PreloadBackground.prototype), 'constructor', this).call(this, props);
 
     this.state = {
       loaded: false,
@@ -61,7 +61,7 @@ var BackgroundLoader = (function (_React$Component) {
     this.handleError = this.handleError.bind(this);
   }
 
-  _createClass(BackgroundLoader, [{
+  _createClass(PreloadBackground, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       // Making this a global so it can be later
@@ -112,14 +112,14 @@ var BackgroundLoader = (function (_React$Component) {
 
       return _react2['default'].createElement(
         'div',
-        _extends({ style: { backgroundImage: 'url(' + source + ')' } }, props),
+        _extends({ style: { PreloadBackground: 'url(' + source + ')' } }, props),
         children
       );
     }
   }]);
 
-  return BackgroundLoader;
+  return PreloadBackground;
 })(_react2['default'].Component);
 
-exports['default'] = BackgroundLoader;
+exports['default'] = PreloadBackground;
 module.exports = exports['default'];

@@ -1,5 +1,5 @@
 {
-  "name": "react-background-image-loader",
+  "name": "react-preload-background",
   "version": "0.0.1",
   "description": "This package allows you to display a placeholder image while the actual background image loads",
   "main": "index.js",
@@ -8,20 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danieltimpone/react-background-image-loader.git"
+    "url": "git@github.com:nicholas-b-carter/react-preload-background.git"
   },
   "keywords": [
     "react",
     "image",
     "loader",
+    "preloader",
+    "transitions",
     "background"
   ],
-  "author": "Daniel Timpone",
-  "license": "ISC",
+  "author": "Nicholas Carter",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danieltimpone/react-background-image-loader/issues"
+    "url": "https://github.com/nicholas-b-carter/react-preload-background/issues"
   },
-  "homepage": "https://github.com/danieltimpone/react-background-image-loader#readme",
+  "homepage": "https://github.com/nicholas-b-carter/react-preload-background#readme",
   "dependencies": {
     "react": "^0.14.7"
   }, 
