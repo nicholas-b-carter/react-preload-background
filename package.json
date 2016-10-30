@@ -1,6 +1,6 @@
 {
   "name": "react-preload-background",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This package allows you to display a placeholder image while the actual background image loads",
   "main": "index.js",
   "scripts": {
