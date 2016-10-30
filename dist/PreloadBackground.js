@@ -31,10 +31,10 @@ var _react2 = _interopRequireDefault(_react);
        </PreloadBackground>
 */
 
-var PreloadBackground = (function (_React$Component) {
-  _inherits(PreloadBackground, _React$Component);
+var imageBackgroundPreloader = (function (_React$Component) {
+  _inherits(imageBackgroundPreloader, _React$Component);
 
-  _createClass(PreloadBackground, null, [{
+  _createClass(imageBackgroundPreloader, null, [{
     key: 'propTypes',
     get: function get() {
       return {
@@ -47,10 +47,10 @@ var PreloadBackground = (function (_React$Component) {
     }
   }]);
 
-  function PreloadBackground(props) {
-    _classCallCheck(this, PreloadBackground);
+  function imageBackgroundPreloader(props) {
+    _classCallCheck(this, imageBackgroundPreloader);
 
-    _get(Object.getPrototypeOf(PreloadBackground.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(imageBackgroundPreloader.prototype), 'constructor', this).call(this, props);
 
     this.state = {
       loaded: false,
@@ -61,7 +61,7 @@ var PreloadBackground = (function (_React$Component) {
     this.handleError = this.handleError.bind(this);
   }
 
-  _createClass(PreloadBackground, [{
+  _createClass(imageBackgroundPreloader, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       // Making this a global so it can be later
@@ -104,22 +104,30 @@ var PreloadBackground = (function (_React$Component) {
       var _props = this.props;
       var src = _props.src;
       var placeholder = _props.placeholder;
-      var children = _props.children || (<img className="loading"/>);
+      var _props$className = _props.className;
+      var className = _props$className === undefined ? ' image' : _props$className;
+      var _props$children = _props.children;
+      var children = _props$children === undefined ? null : _props$children;
 
-      var props = _objectWithoutProperties(_props, ['src', 'placeholder', 'children']);
+      var props = _objectWithoutProperties(_props, ['src', 'placeholder', 'className', 'children']);
+
+      var loadedClass = !className.contains('image') ? className + ' image' : className;
+
+      if (this.state.loaded && !loadedClass.contains('loaded')) {
+        loadedClass += ' loaded';
+      }
 
       var source = !this.state.loaded || this.state.error ? placeholder : src;
-
       return _react2['default'].createElement(
         'div',
-        _extends({ style: { PreloadBackground: 'url(' + source + ')' } }, props),
+        _extends({ style: { PreloadBackground: 'url(' + source + ')' } }, props, { className: loadedClass }),
         children
       );
     }
   }]);
 
-  return PreloadBackground;
+  return imageBackgroundPreloader;
 })(_react2['default'].Component);
 
-exports['default'] = PreloadBackground;
+exports['default'] = imageBackgroundPreloader;
 module.exports = exports['default'];
