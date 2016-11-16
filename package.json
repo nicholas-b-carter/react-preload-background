@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/nicholas-b-carter/react-preload-background#readme",
   "dependencies": {
-    "react": "^15.3.2"
+    "react": "^15.4.0"
   }, 
   "devDependencies": {
     "babel-core": "^6.18.0",
